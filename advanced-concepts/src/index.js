@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import LifeCycleEventsComponent from "./components/LifeCycleEventsComponent";
+import ErrorBoundries from "./components/ErrorBoundries";
 
-ReactDOM.render(<LifeCycleEventsComponent></LifeCycleEventsComponent>, document.getElementById("root"))
+ReactDOM.render(<ErrorBoundries></ErrorBoundries>, document.getElementById("root"))
