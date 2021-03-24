@@ -12,16 +12,22 @@ class AppComponent extends React.Component {
         })  
     }
 
+    deleteEmployee(event) {
+        this.props.deleteEmployee(event.target.id);
+    }
+
     render() {
         debugger;
         return (
             <div>
                 <h1>List of Employees</h1>
                 <input type="button" value="Get Data" onClick={this.addEmployee.bind(this)} />
+                <input type="button" value="Delete All" onClick={this.props.deleteAllEmployee.bind(this)} />
                 {this.props.employees.map((emp) => {
                     return (
                         <div>
                             <h2>Employee Name: {emp.name}</h2>
+                            <input id={emp.id} type="button" onClick={this.deleteEmployee.bind(this)} value="Delete" />
                         </div>
                     )
                 })}

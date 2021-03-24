@@ -6,12 +6,15 @@ export function addEmployeesList(empList) {
     }
 }
 
-export function deleteEmployee(empId, location) {
+export function deleteEmployee(empId) {
     return {
         type: "DELETE_EMPLOYEE",
-        payload: {
-            empId: empId,
-            location: location
-        },
+        payload: empId
+    }
+}
+
+export function deleteAllEmployee() {
+    return {
+        type: "DELETE_ALL_EMPLOYEE"
     }
 }
